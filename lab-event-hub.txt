@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Event Hub</title>
+</head>
+  <body>
+    <header>
+      <h1>Event Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="#upcoming-events">Upcoming Events</a></li>
+          <li><a href="#past-events">Past Events</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <article>
+            <h3>High school class of 2011 reunion</h3>
+            <p>Morbi pulvinar arcu dolor, et convallis tortor lacinia ut. Vivamus tristique ut arcu eget vulputate. <time datetime="2025-03-15T19:00">March 15</time>.</p>
+        </article>
+        <article>
+            <h3>College class of 2017 reunion</h3>
+            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam vel finibus tellus, id aliquet purus. <timedatetime="2025-06-15T19:00">June 15</time>.</p>
+        </article>
+      </section>
+      <section id="past-events">
+        <h2>Past Events</h2>
+        <article>
+            <h3>Rock concert</h3>
+            <p>Nulla facilisi. Ut egestas cursus semper. Vestibulum dignissim quis leo in dignissim.<time datetime="2024-03-15T19:00"> March 15 2024</time>.</p>
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="old personal computer">
+        </article>
+        <article>
+            <h3>Tech meetup</h3>
+            <p>Fusce eu sapien mattis eros euismod sagittis. Nam nec nibh varius, mollis ante ac, porttitor ex. Integer et porta arcu. Vivamus purus turpis, pharetra in mattis quis, sodales convallis mauris.<time datetime="2024-03-15T19:00"> March 15 2024</time>.</p>
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg" alt="crowd of people in a rock concert">
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
