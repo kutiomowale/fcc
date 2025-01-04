@@ -1,2 +1,5 @@
 # Ignore Pythin files
 __pycache__/
+
+# Ignore IDE/editor files
+*.swp
