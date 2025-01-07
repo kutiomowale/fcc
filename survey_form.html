@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Where do you stream your audios from?</h1>
+      <p>Thank you for using Dynamiq, please fill this short survey to help us serve you better.</p>
+    </header>
+    <main>
+      <form action="https://httpbin.org/post" method="post" target="_blank">
+        <fieldset>
+	  <label>
+	    Your name
+	    <input type="text" required placeholder="Name" name="name">
+	  </label>
+	  <label>
+	    Your email
+	    <input type="email" required placeholder="example@email.com" name="email">
+	  </label>
+	  <label>
+	    Your age(optional)
+	    <input type="number" placeholder="xx" min="15" name="age">
+	  </label>
+        </fieldset>
+        <fieldset>
+	  <legend>What's your favorite audio streaming platform?</legend>
+	  <label for="yt-music">YT Music</label>
+	  <input
+	    type="radio"
+	    checked
+            id="yt-music"
+            name="favorite"
+            value="yt-music"
+	  >
+	  <label for="spotify">Spotify</label>
+	  <input
+	    type="radio"
+            id="spotify"
+            name="favorite"
+            value="spotify"
+	  >
+	  <label for="apple-music">Apple Music</label>
+	  <input
+	    type="radio"
+            id="apple-music"
+            name="favorite"
+            value="apple-music"
+	  >
+	  <label for="other">Other</label>
+	  <input
+	    type="radio" id="other"
+	    name="favorite"
+	    value="other"
+	  >
+	</fieldset>
+	<label>
+	  If you selected other, please input the name of the platform
+          <input type="text" name="other-platform" placeholder="Enter here">
+	</label>
+	<fieldset>
+          <legend>Which of this do you stream often(select all that apply</legend>
+	  <label>
+	    Music
+	    <input type="checkbox" checked value="music">
+	  </label>
+	  <label>
+	    Audiobooks
+	    <input type="checkbox" value="audiobooks">
+	  </label>
+	  <label>
+	    Podcasts
+	    <input type="checkbox" value="podcasts">
+	  </label>
+	</fieldset>
+	<fieldset>
+	  <legend>How satisfied are you with the platform?</legend>
+	  <label>
+	    Select an option
+	    <select size="4" name="service" id="service" required>
+	      <option selected value="very-satisfied">Very satisfied</option>
+	      <option value="satisfied">Satisfied</option>
+	      <option value="unsatisfied">Unsatisfied</option>
+	      <option value="very-unsatisfied">Very unsatisfied</option>
+	    </select>
+	  </label>
+	</fieldset>
+	<button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
