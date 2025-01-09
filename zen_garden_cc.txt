@@ -1,0 +1,13 @@
+<@&1209909121520898059> I need some help taking care of my Zen garden. There's a bunch of stuff in there that shouldn't be in there!
+
+The only things allowed in my garden are gravel and rock. Anything else should be removed and replaced with more gravel.
+
+**Here is your challenge:** Given a string representing the contents of my gravel, replace everything in the string that is not "gravel" or "rock" with "gravel".
+
+**Test Cases:**
+
+- With `slug spider rock gravel gravel gravel gravel gravel gravel gravel`, return `gravel gravel rock gravel gravel gravel gravel gravel gravel gravel`
+- With `gravel gravel gravel gravel gravel gravel gravel gravel gravel rock slug ant gravel gravel snail rock gravel gravel gravel gravel gravel gravel gravel slug gravel ant gravel gravel gravel gravel rock slug gravel gravel gravel gravel gravel snail gravel gravel rock gravel snail slug gravel gravel spider gravel gravel gravel gravel gravel gravel gravel gravel moss gravel gravel gravel snail gravel gravel gravel ant gravel gravel moss gravel gravel gravel gravel snail gravel gravel gravel gravel slug gravel rock gravel gravel rock gravel gravel gravel gravel snail gravel gravel rock gravel gravel gravel gravel gravel spider gravel rock gravel gravel` return `gravel gravel gravel gravel gravel gravel gravel gravel gravel rock gravel gravel gravel gravel gravel rock gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel rock gravel gravel gravel gravel gravel gravel gravel gravel gravel rock gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel rock gravel gravel rock gravel gravel gravel gravel gravel gravel gravel rock gravel gravel gravel gravel gravel gravel gravel rock gravel gravel`
+- With `notgravel gravel notgravel gravel notgravel gravel notgravel gravel notgravel gravel rock rockstar notrock rock rock notrock gravel` return `gravel gravel gravel gravel gravel gravel gravel gravel gravel gravel rock gravel gravel rock rock gravel gravel`
+
+**You may use any language you'd like to solve this challenge.**

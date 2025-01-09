@@ -6,23 +6,25 @@
   </head>
   <body>
     <header>
-      <h1>Where do you stream your audios from?</h1>
-      <p>Thank you for using Dynamiq, please fill this short survey to help us serve you better.</p>
+      <h1 id="title">Where do you stream your audios from?</h1>
+      <p id="description">Thank you for using Dynamiq, please fill this short survey to help us serve you better.</p>
     </header>
     <main>
-      <form action="https://httpbin.org/post" method="post" target="_blank">
+      <form action="https://httpbin.org/post" method="post" target="_blank" id="survey-form">
         <fieldset>
-	  <label>
+	  <label id="name-label">
 	    Your name
-	    <input type="text" required placeholder="Name" name="name">
+	    <input type="text" required placeholder="Name" name="name" id="name">
 	  </label>
-	  <label>
+	  <label id="email-label">
 	    Your email
-	    <input type="email" required placeholder="example@email.com" name="email">
+	    <input type="email" required placeholder="example@email.com" name="email" id="email">
 	  </label>
-	  <label>
+	  <label id="number-label">
 	    Your age(optional)
-	    <input type="number" placeholder="xx" min="15" name="age">
+	    <input
+	      type="number" min="15" max="150" name="age" id="number" value="25" placeholder="Age"
+	    >
 	  </label>
         </fieldset>
         <fieldset>
@@ -79,7 +81,7 @@
 	  <legend>How satisfied are you with the platform?</legend>
 	  <label>
 	    Select an option
-	    <select size="4" name="service" id="service" required>
+	    <select size="4" name="service" id="dropdown" required>
 	      <option selected value="very-satisfied">Very satisfied</option>
 	      <option value="satisfied">Satisfied</option>
 	      <option value="unsatisfied">Unsatisfied</option>
@@ -87,7 +89,14 @@
 	    </select>
 	  </label>
 	</fieldset>
-	<button type="submit">Submit</button>
+	<fieldset>
+	  <label for="comments">Any comments?</label>
+	  <textarea name="comments" id="comments" rows="4" cols="50">
+	    Your comments
+	  </textarea>
+	</fieldset>
+
+	<button type="submit" id="submit">Submit</button>
       </form>
     </main>
   </body>
