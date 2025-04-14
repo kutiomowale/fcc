@@ -1,0 +1,135 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="business-card">
+        <main>
+            <img class="profile-image" src="https://cdn.freecodecamp.org/curriculum/labs/flower.jpg" alt="A pink flower.">
+            <p class="full-name">Ranome-Kuti Omowale</p>
+            <p class="designation">Web Developer</p>
+            <p class="company">Kutech</p>
+            <hr>
+            <p>walekuti@yahoo.com</p>
+            <p>+2349124735555</p>
+            <a target="_blank" href="https://www.github.com/kutiomowale" class="portfolio">Portfolio</a>
+            <hr>
+            <div class="social-media">
+                <h2>Connect with me</h2>
+                <a target="_blank" href="https://x.com/kutiomowale" class="twitter">Twitter</a>
+                <a target="_blank" href="https://www.linkedin.com/in/kutiomowale" class="linkedin">LinkedIn</a>
+                <a target="_blank" href="https://www.github.com/kutiomowale" class="github">GitHub</a>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+/* General Styling */
+body {  
+    background-color: rosybrown;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Business Card Container */
+.business-card {
+    width: 300px;
+    background-color: beige;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+p {
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Portfolio Link */
+.portfolio {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 12px;
+    color: white;
+    background-color: #0073b1;
+    border-radius: 5px;
+}
+
+.portfolio:hover {
+    background-color: #005582;
+}
+
+/* Social Media Section */
+.social-media h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Social Media Links */
+.social-media a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    color: white;
+    border-radius: 5px;
+}
+
+.twitter { background-color: #1DA1F2; } /* Twitter Blue */
+.linkedin { background-color: #0073b1; } /* LinkedIn Blue */
+.github { background-color: #333; } /* GitHub Dark */
+
+.twitter:hover { background-color: #0c85d0; }
+.linkedin:hover { background-color: #005582; }
+.github:hover { background-color: #222; }
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+    .business-card {
+        width: 90%;
+    }
+}
+
+
+** end of undefined **
+

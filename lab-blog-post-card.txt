@@ -1,0 +1,77 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="blog-post-card">
+    <img class="post-img" src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg" alt="A laptop on a desk displaying code, with a coffee mug beside it, symbolizing a focused and productive programming environment.">
+    <div class="post-content">
+      <h2 class="post-title">Learn Web Development in 2025</h2>
+      <p class="post-excerpt">Stay ahead of the curve with the latest trends in web development. Discover what's new and exciting in 2025</p>
+      <a class="read-more" href="https:www.freecodecamp.org">Read More</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+** end of undefined **
+
+** start of undefined **
+
+.blog-post-card {
+      background-color: white;
+      border-radius: 12px;
+      width: 300px;
+      text-align: center;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 2px auto;
+    }
+
+    .post-img {
+      width: 100%; 
+      display: block;
+      border-bottom: 2px solid #ccc;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .post-content {
+      padding: 10px;
+    }
+
+    .post-title {
+      color: #2c3e50;
+      margin: 2px 2px 10px 2px;
+    }
+    .post-excerpt {
+      color: #7f8c8d;
+      margin: 2px 2px 15px 2px;
+    }
+.read-more {
+  color: #9b59b6;
+  background-color: #f0e6f7;
+  margin: 2px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+.read-more:hover {
+  background-color: #dcd1e2
+}
+
+/* Margins on all sides.
+Padding on all sides.
+Rounded corners.
+A display property set to inline-block.
+A hover effect that changes its background color. */
+
+** end of undefined **
+

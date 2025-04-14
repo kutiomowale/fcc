@@ -1,0 +1,87 @@
+** start of undefined **
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <h1>My To-Do List</h1>
+      <ul class="todo-list">
+        <li>
+	      <input type="checkbox" id="one">
+	      <label for="one">Explore gaming keyboards</label>
+	      <ul class="sub-item">
+	        <li>
+		      <a  class="sub-item-link" target="_blank" href="https://www.jumia.com.ng/pc-gaming-keyboards/">Store link</a>
+	        </li>
+	      </ul>
+        </li>
+	    <li>
+	      <input type="checkbox" id="two">
+	      <label for="two">Finish FCC action plan</label>
+	      <ul class="sub-item">
+	        <li>
+		      <a class="sub-item-link" target="_blank" href="https://docs.google.com/document/d/1YVG-A8yMVOewGkQC5Oq7kwn0KHoN6JmOsooTcVOabkk/edit?usp=drivesdk">Document link</a>
+	        </li>
+	      </ul>
+	    </li>
+	    <li>
+	      <input type="checkbox" id="three">
+	      <label for="three">Finish FCC action plan</label>
+	      <ul class="sub-item">
+	        <li>
+		      <a class="sub-item-link" target="_blank" href="https://docs.google.com/document/d/1YVG-A8yMVOewGkQC5Oq7kwn0KHoN6JmOsooTcVOabkk/edit?usp=drivesdk">Document link</a>
+	        </li>
+	      </ul>
+	    </li>
+	    <li>
+	      <input type="checkbox" id="four">
+	      <label for="four">Finish FCC action plan</label>
+	      <ul class="sub-item">
+	        <li>
+		      <a class="sub-item-link" target="_blank" href="https://docs.google.com/document/d/1YVG-A8yMVOewGkQC5Oq7kwn0KHoN6JmOsooTcVOabkk/edit?usp=drivesdk">Document link</a>
+	        </li>
+	      </ul>
+	    </li>
+      </ul>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+.todo-list {
+  list-style: none;
+}
+.sub-item li {
+   list-style-type: square;
+}
+a {
+  text-decoration: none;
+}
+a {
+  color: #3B82F6;
+}
+a:visited {
+  color: #7C3AED;
+}
+a:hover {
+  color: #2563EB;
+}
+a:focus {
+  outline: 2px solid #2563EB;
+}
+a:active {
+  color: #1D4ED8;
+}   
+
+** end of undefined **
+
