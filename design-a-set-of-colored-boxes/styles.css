@@ -4,5 +4,7 @@ body {
 .color-box {
  width: 100px;
  height: 50px;
- background-color: blue;
+}
+.color1 {
+ background-color: #FFBE0B; 
 }
