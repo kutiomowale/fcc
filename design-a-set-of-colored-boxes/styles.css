@@ -1,0 +1,8 @@
+body {
+ background-color: #f4f4f4;
+}
+.color-box {
+ width: 100px;
+ height: 50px;
+ background-color: blue;
+}
