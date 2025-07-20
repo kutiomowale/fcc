@@ -1,0 +1,78 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Build an Event Flyer Page</title>
+</head>
+
+<body>
+  <header>
+    <img src="https://cdn.freecodecamp.org/curriculum/labs/rock.jpg" alt="A small rock on green grass.">
+    <h1>Pet Rock Festival</h1>
+    <p>Join us for the first annual Pet Rock Festival!</p>
+    <p>When: October 3rd Where: Boulder Park</p>
+  </header>
+  <hr>
+  <main>
+    <section>
+      <h2>Festival Highlights</h2>
+      <ul>
+        <li>Pet Rock Obedience Shows</li>
+        <li>Best Dressed Pet Rock Contest</li>
+        <li>Pet Rock Uphill Racing</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Special Guests</h2>
+      <ul>
+        <li>John Gravel</li>
+        <li>Wendy Cobblestone</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Food Trucks</h2>
+      <ul>
+        <li>Rock 'n' Roll Tacos</li>
+        <li>Granite Grill</li>
+        <li>Stone Cold Smoothies</li>
+      </ul>
+    </section>
+  </main>
+  <hr>
+  <footer>
+    <p>© 2025 Pet Rock Festival<p>
+  </footer>
+</body>
+
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: calc(100vh - 100px);
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+section,
+hr {
+  width: 32%; /* Slightly less than 33% to allow for spacing/gaps */
+}
+header, footer {
+  text-align: center;
+}
+
+** end of undefined **
+
