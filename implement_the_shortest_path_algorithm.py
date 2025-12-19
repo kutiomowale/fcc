@@ -5,6 +5,19 @@ INF = float('inf')
 
 def shortest_path(matrix, start_node, target_node=None):
     n = len(matrix)
+    if not isinstance(start_node, int):
+        raise TypeError("start_node must be an integer")
+    if start_node < 0 or start_node >= n:
+        raise IndexError(
+                "start_node must be >= 0 and < len(matrix)"
+              )
+    if target_node is not None:
+        if not isinstance(target_node, int):
+            raise TypeError("target_node must be an integer")
+        if target_node < 0 or target_node >= n:
+            raise IndexError(
+                "target_node must be >= 0 and < len(matrix)"
+              )
     distances = [INF] * n
     distances[start_node] = 0
     paths = [[node_no] for node_no in range(n)]
@@ -54,7 +67,21 @@ def main():
         [INF, 2, INF, 3, INF, 0],
     ]
 
-    shortest_path(adj_matrix, 0, 5)
+    adj_matrix_2 = [
+        [0, 6, INF, 1, INF],
+        [6, 0, 5, 2, 2],
+        [INF, 5, 0, INF, 5],
+        [1, 2, INF, 0, 1],
+        [INF, 2, 5, 1, 0]
+    ]
+
+    # shortest_path(adj_matrix, 0, 5)
+    try:
+        print(shortest_path(adj_matrix_2, 0, 1))
+    except TypeError as e:
+        print(f"TypeError: {e}")
+    except IndexError as e:
+        print(f"IndexError: {e}")
 
 
 if __name__ == '__main__':
