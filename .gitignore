@@ -3,3 +3,6 @@ __pycache__/
 
 # Ignore IDE/editor files
 *.swp
+
+# Ignore Text files
+*.txt
