@@ -19,6 +19,7 @@ def bfs_adjacency_list(adj_list, start_node):
 
     return order
 
+
 def main():
     adj_matrix = [
             [0, 1, 1, 0, 0, 0, 0],

@@ -9,7 +9,9 @@ class Employee:
 
     def __init__(self, name, level):
         if not (isinstance(name, str) and isinstance(level, str)):
-            raise TypeError("'name' and 'level' attribute must be of type 'str'.")
+            raise TypeError(
+                    "'name' and 'level' attribute must be of type 'str'."
+            )
         if level not in Employee._base_salaries:
             raise ValueError(f"Invalid value '{level}' for 'level' attribute.")
         self._name = name
@@ -40,10 +42,12 @@ class Employee:
     @level.setter
     def level(self, new_level):
         if new_level not in Employee._base_salaries:
-            raise ValueError(f"Invalid value '{new_level}' for 'level' attribute.")
+            raise ValueError(
+                    f"Invalid value '{new_level}' for 'level' attribute."
+            )
         if new_level == self.level:
             raise ValueError(f"'{self.level}' is already the selected level.")
-        if Employee._base_salaries[new_level] < Employee._base_salaries[self.level]:
+        if Employee._base_salaries[new_level]: < Employee._base_salaries[self.level]:
             raise ValueError(f"Cannot change to lower level.")
         print(f"'{self.name}' promoted to '{new_level}'.")
         self.salary = Employee._base_salaries[new_level]
@@ -58,7 +62,10 @@ class Employee:
         if not isinstance(new_salary, (int, float)):
             raise TypeError("'salary' must be a number.")
         if new_salary <= Employee._base_salaries[self.level]:
-            raise ValueError(f'Salary must be higher than minimum salary ${Employee._base_salaries[self.level]}.')
+            raise ValueError(
+                    f'Salary must be higher than minimum salary '
+                    f'${Employee._base_salaries[self.level]}.'
+            )
         self._salary = new_salary
         print(f'Salary updated to ${self.salary}.')
 

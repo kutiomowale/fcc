@@ -8,7 +8,10 @@ class GameCharacter:
         self._level = 1
 
     def __str__(self):
-        return f"Name: {self.name}\nLevel: {self.level}\nHealth: {self.health}\nMana: {self.mana}"
+        return (
+            f"Name: {self.name}\nLevel: {self.level}\n"
+            f"Health: {self.health}\nMana: {self.mana}"
+        )
 
     @property
     def name(self):

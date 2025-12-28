@@ -9,6 +9,8 @@ Traceback (most recent call last):
     ...
 TypeError: Inner lists must contain only integers
 """
+
+
 def validate_adj_matrix(adj_matrix):
     """If the adjacency matrix @adj_matrix  is valid, no error is raised.
 
@@ -77,17 +79,27 @@ def adj_matrix_to_list(adj_matrix):
         for neighbor in range(n):
             if adj_matrix[node][neighbor] == 1:
                 adj_list[node].append(neighbor)
-    for node  in adj_list:
+    for node in adj_list:
         print(node)
     return adj_list
 
 
 def main():
-    adj_matrix_to_list([[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]])
-    adj_matrix_to_list([[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]])
-    adj_matrix_to_list([[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]])
-    adj_matrix_to_list([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]])
-    adj_matrix_to_list([[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]])
+    adj_matrix_to_list(
+            [[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]
+    )
+    adj_matrix_to_list(
+            [[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0]]
+    )
+    adj_matrix_to_list(
+            [[0, 1, 0, 0], [1, 0, 1, 0], [0, 1, 0, 0], [0, 0, 0, 0]]
+    )
+    adj_matrix_to_list(
+            [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]
+    )
+    adj_matrix_to_list(
+            [[0, 1, 0, 0], [1, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]
+    )
 
 
 if __name__ == '__main__':
