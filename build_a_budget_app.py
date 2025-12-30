@@ -51,10 +51,56 @@ def create_spend_chart(categories):
         percentages = [int(round((w/total_spent * 100), -1)) for w in w_p_c]
     else:
         percentages = (0) * len(categories)
-    result = []
-    result.append("Percentage spent by category")
-    result.append(f"             0 10 20 30 40 50 60 70 80 90 100")
-    for c, p in zip(categories, percentages):
-        result.append(f"{c.name[:10]:<10} o {'o o ' * int(p/10)}")
-    text = "\n".join(result)
-    return text
+    lines = []
+    lines.append("Percentage spent by category")
+    bar_char = 'o'
+    for level in range(100, -10, -10):
+        row = [f'{level:>3}|']
+        for n in percentages:
+            if level <= n:
+                row.append(bar_char)
+            else:
+                row.append(' ')
+        line = '  '.join(row)
+        lines.append(line)
+
+    horizontal_line = (
+        f"    "
+        f"{'---'*len(categories)}"
+        f"--"
+    )
+    lines.append(horizontal_line)
+
+    names = [category.name for category in categories]
+    heights = [len(name) for name in names]
+    max_height = max(heights)
+    for index in range(max_height):
+        row = ['    ']
+        for name, height in zip(names, heights):
+            if index < height:
+                row.append(name[index])
+            else:
+                row.append(' ')
+        lines.append('  '.join(row))
+
+    return '\n'.join(lines) + '\n'
+
+
+def main():
+    food = Category('Food')
+    food.deposit(100, 'deposit')
+    food.withdraw(60, 'groceries')
+    clothing = Category('Clothing')
+    clothing.deposit(100, 'deposit')
+    clothing.withdraw(20, 'house-clothes')
+    auto = Category('Auto')
+    auto.deposit(100, 'deposit')
+    auto.withdraw(10, 'oil')
+    tv = Category('Television')
+    tv.deposit(100, 'deposit')
+    tv.withdraw(10, 'house-clothes')
+    print(create_spend_chart([food, clothing, auto, tv]))
+
+
+if __name__ == '__main__':
+    main()
