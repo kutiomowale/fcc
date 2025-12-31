@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import math
+
 
 class Category:
     def __init__(self, name):
@@ -48,7 +50,7 @@ def create_spend_chart(categories):
     w_p_c = [cat.total_withdrawals() for cat in categories]
     total_spent = sum(w_p_c)
     if total_spent > 0:
-        percentages = [int(round((w/total_spent * 100), -1)) for w in w_p_c]
+        percentages = [math.floor(w/total_spent * 100) for w in w_p_c]
     else:
         percentages = (0) * len(categories)
     lines = []
@@ -61,7 +63,7 @@ def create_spend_chart(categories):
                 row.append(bar_char)
             else:
                 row.append(' ')
-        line = '  '.join(row)
+        line = '  '.join(row) + '  '
         lines.append(line)
 
     horizontal_line = (
@@ -81,9 +83,9 @@ def create_spend_chart(categories):
                 row.append(name[index])
             else:
                 row.append(' ')
-        lines.append('  '.join(row))
+        lines.append('  '.join(row) + '  ')
 
-    return '\n'.join(lines) + '\n'
+    return '\n'.join(lines)
 
 
 def main():
