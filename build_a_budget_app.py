@@ -47,45 +47,39 @@ class Category:
 
 
 def create_spend_chart(categories):
-    w_p_c = [cat.total_withdrawals() for cat in categories]
-    total_spent = sum(w_p_c)
-    if total_spent > 0:
-        percentages = [math.floor(w/total_spent * 100) for w in w_p_c]
-    else:
-        percentages = (0) * len(categories)
+    spent = [cat.total_withdrawals() for cat in categories]
+    total = sum(spent)
+
+    # round DOWN to nearest 10
+    percentages = [(int((s / total) * 100) // 10) * 10 for s in spent]
+
     lines = []
     lines.append("Percentage spent by category")
-    bar_char = 'o'
-    for level in range(100, -10, -10):
-        row = [f'{level:>3}|']
-        for n in percentages:
-            if level <= n:
-                row.append(bar_char)
-            else:
-                row.append(' ')
-        line = '  '.join(row) + '  '
+
+    # bars
+    for level in range(100, -1, -10):
+        line = f"{level:>3}| "
+        for p in percentages:
+            line += "o  " if p >= level else "   "
         lines.append(line)
 
-    horizontal_line = (
-        f"    "
-        f"{'---'*len(categories)}"
-        f"--"
-    )
-    lines.append(horizontal_line)
+    # horizontal line (exact length)
+    lines.append("    " + "---" * len(categories) + "-")
 
-    names = [category.name for category in categories]
-    heights = [len(name) for name in names]
-    max_height = max(heights)
-    for index in range(max_height):
-        row = ['    ']
-        for name, height in zip(names, heights):
-            if index < height:
-                row.append(name[index])
+    # vertical category names
+    names = [cat.name for cat in categories]
+    max_len = max(len(name) for name in names)
+
+    for i in range(max_len):
+        line = "     "
+        for name in names:
+            if i < len(name):
+                line += name[i] + "  "
             else:
-                row.append(' ')
-        lines.append('  '.join(row) + '  ')
+                line += "   "
+        lines.append(line)
 
-    return '\n'.join(lines)
+    return "\n".join(lines)
 
 
 def main():
