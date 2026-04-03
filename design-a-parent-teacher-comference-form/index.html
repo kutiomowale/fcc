@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Parent Teacher Conference Form</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="center title">Parent Teacher Conference Form</h1>
+      <p class="center description">Please fill out the form below to help schedule your parent-teacher conference.</p>
+      <form>
+	<fieldset>
+          <legend>Student Information</legend>
+	  <label for="student-name">
+	    Full Name:
+	    <input type="text" required id="student-name" name="student-name"
+	      placeholder="E.g., Jane Doe"
+	    >
+	  </label>
+	  <label for="student-grade">
+	    Student Grade:
+	    <input type="number" required id="student-grade" name="student-grade"
+	      placeholder="E.g., 4"
+	    >
+	  </label>
+        </fieldset>
+	<fieldset>
+          <legend>Parent/Guardian Information</legend>
+	  <label for="parent-guardian-name">
+	    Parent/Guardian Name:
+	    <input type="text" required id="parent-guardian-name" name="parent-guardian-name"
+	      placeholder="E.g., Nancy Doe"
+	    >
+	  </label>
+        </fieldset>
+	<fieldset>
+          <legend>Preferred Contact Method</legend>
+	  <label for="email" class="contact-method">
+	    Email:
+	    <input type="radio" id="email" name="contact-method" value="email" checked class="contact-method-radio-btn">
+	  </label>
+	  <label for="phone" class="contact-method">
+	    Phone:
+	    <input type="radio" id="phone" name="contact-method" value="phone" class="contact-method-radio-btn">
+	  </label>
+        </fieldset>
+	<fieldset>
+          <legend>Additional Notes</legend>
+	  <label for="additional-notes">
+	    Any specific concerns or topics you'd like to discuss?
+	    <textarea id="additional-notes" name="additional-notes"></textarea>
+	  </label>
+        </fieldset>
+	<button type="submit" class="submit-btn">Submit Form</button>
+      </form>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
