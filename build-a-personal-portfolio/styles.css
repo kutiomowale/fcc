@@ -27,13 +27,13 @@ header {
   z-index: 1000;
 }
 
-#nav-bar {
+#navbar {
   display: flex;
   justify-content: flex-end;
   padding: 1rem 2rem;
 }
 
-#nav-bar a {
+#navbar a {
   color: white;
   text-decoration: none;
   margin-left: 2rem;
@@ -42,7 +42,7 @@ header {
   transition: color 0.3s;
 }
 
-#nav-bar a:hover {
+#navbar a:hover {
   color: #f0db4f;
 }
 
@@ -88,31 +88,31 @@ header {
   justify-content: center;
 }
 
-.project-title {
+.project-tile {
   max-width: 400px;
 }
 
-.project-title a {
+.project-tile a {
   text-decoration: none;
 }
 
-.project-title figure {
+.project-tile figure {
   background-color: #303841;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s;
 }
 
-.project-title figure:hover {
+.project-tile figure:hover {
   transform: translateY(-8px);
 }
 
-.project-title img {
+.project-tile img {
   width: 100%;
   display: block;
 }
 
-.project-title figcaption {
+.project-tile figcaption {
   text-align: center;
   padding: 1rem;
   color: white;
