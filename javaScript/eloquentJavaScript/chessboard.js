@@ -1,10 +1,14 @@
 #!/usr/bin/env node
-//8x8 grid
-const line = "# ".repeat(4) + "\n";
-let chessboard = "";
-for (let lineNumber = 0; lineNumber < 8; lineNumber++) {
-  if (lineNumber % 2 == 0) chessboard += (" " + line);
-  else chessboard += line;
+const size = 100;
+let i = 0, j = 0, chessboard = "";
+while (i < size) {
+  j = 0;
+  while (j < size) {
+    if ((i + j) % 2  == 0) chessboard += " ";
+    else chessboard += "#";
+    j++;
+  }
+  chessboard += "\n";
+  i++;
 }
-
 console.log(chessboard);
